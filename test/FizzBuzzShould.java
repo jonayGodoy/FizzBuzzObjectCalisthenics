@@ -12,4 +12,5 @@ public class FizzBuzzShould {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.returnPosition(1), is(new WrapperFizzBuzz("1")));
     }
+
 }
