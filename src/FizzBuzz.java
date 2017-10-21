@@ -1,5 +1,5 @@
-/**
- * Created by Usuario on 21/10/2017.
- */
-public class FizzBuzz {
+class FizzBuzz {
+    WrapperFizzBuzz returnPosition(int position) {
+        return new WrapperFizzBuzz("1");
+    }
 }
