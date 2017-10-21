@@ -1,6 +1,14 @@
 
 public class WrapperString {
 
+    static WrapperString convertWrapperString(WrapperNumber number) {
+        return new WrapperString(number.toString());
+    }
+
+    static WrapperString empty() {
+        return new WrapperString("");
+    }
+
     private String s;
 
     WrapperString(String s) {

@@ -1,9 +1,21 @@
 class WrapperFizzBuzz {
 
+    public WrapperString getContent() {
+        return content;
+    }
+
     private WrapperString content;
 
-    WrapperFizzBuzz(WrapperString content) {
-        this.content = content;
+    WrapperFizzBuzz(WrapperNumber number) {
+        this.content = generateWrapperString(number);
+    }
+
+    private WrapperString generateWrapperString(WrapperNumber number) {
+        if(number.isZero()){
+            return WrapperString.empty();
+        }
+
+        return WrapperString.convertWrapperString(number);
     }
 
     @Override

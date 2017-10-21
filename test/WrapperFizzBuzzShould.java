@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.*;
 
-public class FizzBuzzShould {
+public class WrapperFizzBuzzShould {
 
     private FizzBuzz fizzBuzz;
 
@@ -13,7 +13,7 @@ public class FizzBuzzShould {
     }
 
     private void assertThatPositionIs(int position,String s){
-        assertThat(fizzBuzz.returnPosition(position), is(new WrapperFizzBuzz(new WrapperString(s))));
+        assertThat(new WrapperFizzBuzz(new WrapperNumber(position)).getContent(), is(new WrapperString(s)));
     }
 
     @Test
@@ -22,10 +22,6 @@ public class FizzBuzzShould {
     }
     @Test
     public void first_position_them_1(){
-        assertPositionIsCorrect();
-    }
-
-    private void assertPositionIsCorrect() {
         assertThatPositionIs(1,"1");
     }
 
