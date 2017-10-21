@@ -7,6 +7,7 @@ class WrapperFizzBuzz {
     WrapperFizzBuzz(WrapperNumber number) {
         engineRules = new EngineRules(new BasicRule(number));
         engineRules.addRule(new RuleZero(number));
+        engineRules.addRule(new RuleFizzBuzz(number));
         engineRules.addRule(new RuleFizz(number));
         engineRules.addRule(new RuleBuzz(number));
 
