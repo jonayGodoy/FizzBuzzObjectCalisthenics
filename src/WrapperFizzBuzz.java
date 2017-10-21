@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class WrapperFizzBuzz {
+
+    private List<Rule> rules;
 
     public WrapperString getContent() {
         return content;
@@ -7,12 +12,14 @@ class WrapperFizzBuzz {
     private WrapperString content;
 
     WrapperFizzBuzz(WrapperNumber number) {
+        rules = new ArrayList<>();
+        rules.add(new IsZeroRule(number));
         this.content = generateWrapperString(number);
     }
 
     private WrapperString generateWrapperString(WrapperNumber number) {
-        if(number.isZero()){
-            return WrapperString.empty();
+        for (Rule rule : rules) {
+            return EngineRules.execute(rule);
         }
 
         return WrapperString.convertWrapperString(number);

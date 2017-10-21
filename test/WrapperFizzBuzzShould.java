@@ -40,4 +40,9 @@ public class WrapperFizzBuzzShould {
         assertThatPositionIs(0,"");
     }
 
+    @Test
+    public void thirst_position_them_3() throws Exception {
+        assertThatPositionIs(3,"Fizz");
+    }
+
 }

@@ -11,7 +11,7 @@ class WrapperNumber{
         return String.valueOf(number);
     }
 
-    public boolean isZero() {
-        return number == 0;
+    public int getNumber() {
+        return number;
     }
 }
