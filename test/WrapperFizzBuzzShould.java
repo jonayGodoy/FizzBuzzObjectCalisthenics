@@ -16,10 +16,18 @@ public class WrapperFizzBuzzShould {
         assertThat(new WrapperFizzBuzz(new WrapperNumber(position)).getContent(), is(new WrapperString(s)));
     }
 
+    private int generateRandomMultiple(int multiple) {
+        int n = -1;
+        while(n % multiple != 0){
+            n = (int) Math.floor(Math.random()*(1-100)+100);
+        }
+        return n;
+    }
     @Test
     public void testGreen() throws Exception {
         assertThat(true, is(true));
     }
+
     @Test
     public void first_position_them_1(){
         assertThatPositionIs(1,"1");
@@ -41,8 +49,8 @@ public class WrapperFizzBuzzShould {
     }
 
     @Test
-    public void thirst_position_them_Fizz() throws Exception {
-        assertThatPositionIs(3,"Fizz");
+    public void multiple_of_three_position_them_Fizz() throws Exception {
+        assertThatPositionIs(generateRandomMultiple(3),"Fizz");
     }
 
 }
