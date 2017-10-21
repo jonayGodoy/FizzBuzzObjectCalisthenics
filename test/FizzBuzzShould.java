@@ -35,8 +35,8 @@ public class FizzBuzzShould {
     }
 
     @Test
-    public void thirst_position_them_3() throws Exception {
-        assertThatPositionIs(3,"3");
+    public void thirst_position_them_4() throws Exception {
+        assertThatPositionIs(4,"4");
     }
 
     @Test
