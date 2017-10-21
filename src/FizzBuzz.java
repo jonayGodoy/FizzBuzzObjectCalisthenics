@@ -5,10 +5,10 @@ class FizzBuzz {
 
     private List<WrapperFizzBuzz> list100;
 
-    public FizzBuzz() {
-        list100 = new ArrayList<>();
-        for(int i =0; i < 100;i++){
-            list100.add(i,new WrapperFizzBuzz(String.valueOf(i)));
+    FizzBuzz() {
+        list100 = new ArrayList<>(101);
+        for(int i = 0; i < 100;i++){
+            list100.add(i,new WrapperFizzBuzz(new WrapperString(String.valueOf(i))));
         }
     }
 

@@ -1,8 +1,8 @@
 class WrapperFizzBuzz {
 
-    private String content;
+    private WrapperString content;
 
-    WrapperFizzBuzz(String content) {
+    WrapperFizzBuzz(WrapperString content) {
         this.content = content;
     }
 
