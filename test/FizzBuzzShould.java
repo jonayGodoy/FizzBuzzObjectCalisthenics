@@ -19,4 +19,10 @@ public class FizzBuzzShould {
         assertThat(fizzBuzz.returnPosition(2), is(new WrapperFizzBuzz(new WrapperString("2"))));
     }
 
+    @Test
+    public void zero_position_them_empty() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertThat(fizzBuzz.returnPosition(0), is(new WrapperFizzBuzz(new WrapperString(""))));
+    }
+
 }
