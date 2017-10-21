@@ -53,4 +53,9 @@ public class WrapperFizzBuzzShould {
         assertThatPositionIs(generateRandomMultiple(3),"Fizz");
     }
 
+    @Test
+    public void multiple_of_five_position_them_Buzz() throws Exception {
+        assertThatPositionIs(generateRandomMultiple(5),"Buzz");
+    }
+
 }
