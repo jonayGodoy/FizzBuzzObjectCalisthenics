@@ -1,28 +1,20 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class WrapperFizzBuzz {
 
-    private List<Rule> rules;
-
-    public WrapperString getContent() {
-        return content;
-    }
+    private EngineRules engineRules;
 
     private WrapperString content;
 
     WrapperFizzBuzz(WrapperNumber number) {
-        rules = new ArrayList<>();
-        rules.add(new IsZeroRule(number));
+        engineRules = new EngineRules(new BasicRules(number));
         this.content = generateWrapperString(number);
     }
 
     private WrapperString generateWrapperString(WrapperNumber number) {
-        for (Rule rule : rules) {
-            return EngineRules.execute(rule);
-        }
+        return engineRules.executeAll();
+    }
 
-        return WrapperString.convertWrapperString(number);
+    WrapperString getContent() {
+        return content;
     }
 
     @Override
