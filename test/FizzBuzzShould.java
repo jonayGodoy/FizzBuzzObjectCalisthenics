@@ -20,6 +20,12 @@ public class FizzBuzzShould {
     }
 
     @Test
+    public void thirst_position_them_3() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertThat(fizzBuzz.returnPosition(3), is(new WrapperFizzBuzz(new WrapperString("3"))));
+    }
+
+    @Test
     public void zero_position_them_empty() throws Exception {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.returnPosition(0), is(new WrapperFizzBuzz(new WrapperString(""))));
