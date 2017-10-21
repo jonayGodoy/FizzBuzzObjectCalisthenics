@@ -5,11 +5,14 @@ class WrapperFizzBuzz {
     private WrapperString content;
 
     WrapperFizzBuzz(WrapperNumber number) {
-        engineRules = new EngineRules(new BasicRules(number));
-        this.content = generateWrapperString(number);
+        engineRules = new EngineRules(new BasicRule(number));
+        engineRules.addRule(new RuleZero(number));
+        engineRules.addRule(new RuleFizz(number));
+
+        this.content = generateWrapperString();
     }
 
-    private WrapperString generateWrapperString(WrapperNumber number) {
+    private WrapperString generateWrapperString() {
         return engineRules.executeAll();
     }
 
