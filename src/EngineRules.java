@@ -5,19 +5,24 @@ class EngineRules {
 
     private List<Rule> rules ;
 
-    public EngineRules() {
+    EngineRules() {
         rules = new ArrayList<>();
     }
 
-    public void addRule(Rule rule){
+    void addRule(Rule rule){
         rules.add(rule);
     }
 
-    public WrapperString executeAll(){
-        for (Rule rule : rules) {
-            if(rule.match()){return rule.generateWrapperString();}}
+     WrapperString executeAll(){
+        WrapperString result = WrapperString.empty();
 
-        return WrapperString.empty();
+        IteratorListRule iteratorListRule = new IteratorListRule(rules);
+        while(iteratorListRule.hasNextRule()){
+           Rule rule = iteratorListRule.nextRule();
+           result = rule.generateWrapperString();
+        }
+
+        return result;
     }
 
 }
