@@ -1,18 +1,14 @@
 import java.util.List;
 
-public class IteratorListRule{
+class IteratorListRule{
 
-    private int positionCurrentRule;
     private List<Rule> ruleList;
     private boolean isNext = true;
+    private int positionCurrentRule;
 
     IteratorListRule(List<Rule> ruleList) {
         this.positionCurrentRule = 0;
         this.ruleList = ruleList;
-    }
-
-    boolean hasNextRule(){
-        return  isNext && positionCurrentRule < ruleList.size();
     }
 
     Rule nextRule(){
@@ -21,5 +17,13 @@ public class IteratorListRule{
         positionCurrentRule++;
 
         return currentRule;
+    }
+
+    boolean hasNextRule(){
+        return  isNext && isEndList();
+    }
+
+    private boolean isEndList() {
+        return positionCurrentRule < ruleList.size();
     }
 }
