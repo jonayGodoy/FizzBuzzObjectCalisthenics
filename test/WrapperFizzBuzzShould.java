@@ -49,4 +49,18 @@ public class WrapperFizzBuzzShould {
         assertThatPositionIs(15,"FizzBuzz");
     }
 
+    @Test
+    public void multiple_of_fifty_one_position_them_FizzBuzz() throws Exception {
+        assertThatPositionIs(51,"FizzBuzz");
+    }
+
+    @Test
+    public void multiple_of_fifty_two_position_them_Buzz() throws Exception {
+        assertThatPositionIs(52,"Buzz");
+    }
+
+    @Test
+    public void multiple_of_thirteen_position_them_Fizz() throws Exception {
+        assertThatPositionIs(13,"Fizz");
+    }
 }

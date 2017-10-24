@@ -8,7 +8,11 @@ public class RuleFizz implements Rule {
 
     @Override
     public WrapperBoolean match() {
-        return WrapperNumber.isModuleOf(number, Factory.generateWNumber(3));
+        WrapperBoolean firstCondition = WrapperNumber.isModuleOf(number, Factory.generateWNumber(3));
+        WrapperString numberString = WrapperString.convertWrapperString(number);
+        WrapperBoolean secondCondition = WrapperString.contains(numberString, Factory.generateWString("3"));
+
+        return WrapperBoolean.or(firstCondition,secondCondition);
     }
 
     @Override

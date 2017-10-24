@@ -11,6 +11,10 @@ public class WrapperString {
 
     private String s;
 
+    private String getS() {
+        return s;
+    }
+
     WrapperString(String s) {
         this.s = s;
     }
@@ -28,5 +32,9 @@ public class WrapperString {
     @Override
     public int hashCode() {
         return s != null ? s.hashCode() : 0;
+    }
+
+    static WrapperBoolean contains(WrapperString numberString, WrapperString wrapperString) {
+        return Factory.generateWBoolean(numberString.getS().contains(wrapperString.getS()));
     }
 }
