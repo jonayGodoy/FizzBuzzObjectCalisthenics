@@ -8,11 +8,11 @@ public class RuleFizz implements Rule {
 
     @Override
     public WrapperBoolean match() {
-        return WrapperNumber.isModuleOf(number, Factory.generateNumber(3));
+        return WrapperNumber.isModuleOf(number, Factory.generateWNumber(3));
     }
 
     @Override
     public WrapperString generateWrapperString() {
-        return new WrapperString("Fizz");
+        return Factory.generateWString("Fizz");
     }
 }

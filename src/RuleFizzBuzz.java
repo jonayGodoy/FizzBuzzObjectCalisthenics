@@ -16,6 +16,6 @@ public class RuleFizzBuzz implements Rule{
 
     @Override
     public WrapperString generateWrapperString() {
-        return new WrapperString("FizzBuzz");
+        return Factory.generateWString("FizzBuzz");
     }
 }

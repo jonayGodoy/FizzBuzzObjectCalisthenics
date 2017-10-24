@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class WrapperFizzBuzzShould {
 
     private void assertThatPositionIs(int position,String s){
-        assertThat(new WrapperFizzBuzz(Factory.generateNumber(position)).getContent(), is(new WrapperString(s)));
+        assertThat(new WrapperFizzBuzz(Factory.generateWNumber(position)).getContent(), is(Factory.generateWString(s)));
     }
 
     @Test

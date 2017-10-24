@@ -1,11 +1,11 @@
 class Factory {
 
-    static WrapperNumber generateNumber(int n){
+    static WrapperBoolean generateWBoolean(boolean state){return new WrapperBoolean(state);}
+
+    static WrapperNumber generateWNumber(int n){
         return new WrapperNumber(n);
     }
 
-    static WrapperBoolean generateBoolean(boolean state){
-        return new WrapperBoolean(state);
-    }
+    static WrapperString generateWString(String string){return new WrapperString(string);}
 
 }

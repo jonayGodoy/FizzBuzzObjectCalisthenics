@@ -7,12 +7,12 @@ public class RuleBuzz implements Rule{
 
     @Override
     public WrapperBoolean match() {
-        return WrapperNumber.isModuleOf(number, Factory.generateNumber(5));
+        return WrapperNumber.isModuleOf(number, Factory.generateWNumber(5));
     }
 
     @Override
     public WrapperString generateWrapperString() {
-        return new WrapperString("Buzz");
+        return Factory.generateWString("Buzz");
     }
 
 }

@@ -22,15 +22,15 @@ public class WrapperBoolean {
     }
 
     static WrapperBoolean and(WrapperBoolean a, WrapperBoolean b){
-        return  Factory.generateBoolean(a.state && b.isState());
+        return  Factory.generateWBoolean(a.state && b.isState());
     }
 
     static WrapperBoolean not(WrapperBoolean a){
-        return  Factory.generateBoolean(!a.isState());
+        return  Factory.generateWBoolean(!a.isState());
     }
 
     static WrapperBoolean True(){
-        return Factory.generateBoolean(true);
+        return Factory.generateWBoolean(true);
     }
 
     private boolean isState() {
