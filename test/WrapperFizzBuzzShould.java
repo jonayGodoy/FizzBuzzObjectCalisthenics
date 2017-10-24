@@ -1,16 +1,9 @@
-import org.junit.Before;
 import org.junit.Test;
+
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class WrapperFizzBuzzShould {
-
-    private FizzBuzz fizzBuzz;
-
-    @Before
-    public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz();
-    }
 
     private void assertThatPositionIs(int position,String s){
         assertThat(new WrapperFizzBuzz(Factory.generateNumber(position)).getContent(), is(new WrapperString(s)));
