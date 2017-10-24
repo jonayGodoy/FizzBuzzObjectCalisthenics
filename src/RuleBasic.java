@@ -1,8 +1,8 @@
-public class BasicRule implements Rule{
+public class RuleBasic implements Rule{
 
     private final WrapperNumber number;
 
-    BasicRule(WrapperNumber number) {
+    RuleBasic(WrapperNumber number) {
         this.number = number;
     }
 

@@ -2,7 +2,7 @@ public class RuleZero implements Rule{
 
     private final WrapperNumber number;
 
-    public RuleZero(WrapperNumber number) {
+    RuleZero(WrapperNumber number) {
         this.number = number;
     }
 

@@ -10,7 +10,7 @@ class WrapperFizzBuzz {
         engineRules.addRule(new RuleFizzBuzz(number));
         engineRules.addRule(new RuleFizz(number));
         engineRules.addRule(new RuleBuzz(number));
-        engineRules.addRule(new BasicRule(number));
+        engineRules.addRule(new RuleBasic(number));
 
         this.content = generateWrapperString();
     }
