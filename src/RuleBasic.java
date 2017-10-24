@@ -8,8 +8,8 @@ public class RuleBasic implements Rule{
 
     @Override
     public WrapperBoolean match() {
-        WrapperBoolean firstCondition = WrapperNumber.isGreaterThan(number, new WrapperNumber(0));
-        WrapperBoolean secondCondition = WrapperNumber.isGreaterThan(number, new WrapperNumber(100));
+        WrapperBoolean firstCondition = WrapperNumber.isGreaterThan(number, Factory.generateNumber(0));
+        WrapperBoolean secondCondition = WrapperNumber.isGreaterThan(number, Factory.generateNumber(100));
 
         return WrapperBoolean.and(firstCondition,secondCondition);
     }

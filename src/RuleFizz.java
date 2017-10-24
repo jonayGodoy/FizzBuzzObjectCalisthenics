@@ -8,7 +8,7 @@ public class RuleFizz implements Rule {
 
     @Override
     public WrapperBoolean match() {
-        return WrapperNumber.isModuleOf(number, new WrapperNumber(3));
+        return WrapperNumber.isModuleOf(number, Factory.generateNumber(3));
     }
 
     @Override

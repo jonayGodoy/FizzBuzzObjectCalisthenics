@@ -10,7 +10,7 @@ class EngineRules {
     }
 
     void addRule(Rule rule){
-        rules.put(new WrapperNumber(rules.size()),rule);
+        rules.put(Factory.generateNumber(rules.size()),rule);
     }
 
      WrapperString executeAll(){

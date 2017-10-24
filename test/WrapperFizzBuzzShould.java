@@ -13,7 +13,7 @@ public class WrapperFizzBuzzShould {
     }
 
     private void assertThatPositionIs(int position,String s){
-        assertThat(new WrapperFizzBuzz(new WrapperNumber(position)).getContent(), is(new WrapperString(s)));
+        assertThat(new WrapperFizzBuzz(Factory.generateNumber(position)).getContent(), is(new WrapperString(s)));
     }
 
     @Test

@@ -7,7 +7,7 @@ public class RuleBuzz implements Rule{
 
     @Override
     public WrapperBoolean match() {
-        return WrapperNumber.isModuleOf(number, new WrapperNumber(5));
+        return WrapperNumber.isModuleOf(number, Factory.generateNumber(5));
     }
 
     @Override

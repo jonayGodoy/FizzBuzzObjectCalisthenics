@@ -7,7 +7,7 @@ class IteratorListRule{
     private WrapperNumber positionCurrentRule;
 
     IteratorListRule(Map<WrapperNumber, Rule> ruleList) {
-        this.positionCurrentRule = new WrapperNumber(0);
+        this.positionCurrentRule = Factory.generateNumber(0);
 
         isNext = WrapperBoolean.True();
         this.ruleList = ruleList;
@@ -26,6 +26,6 @@ class IteratorListRule{
     }
 
     private WrapperBoolean isEndList() {
-        return WrapperNumber.isGreaterThan(positionCurrentRule, new WrapperNumber(ruleList.size()-1));
+        return WrapperNumber.isGreaterThan(positionCurrentRule, Factory.generateNumber(ruleList.size()-1));
     }
 }

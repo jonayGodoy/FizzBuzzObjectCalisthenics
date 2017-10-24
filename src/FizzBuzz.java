@@ -11,9 +11,9 @@ class FizzBuzz {
 
     private void generateList() {
         list100 = new ArrayList<>(101);
-        list100.add(0, new WrapperFizzBuzz(new WrapperNumber(0)));
+        list100.add(0, new WrapperFizzBuzz(Factory.generateNumber(0)));
         for(int i = 0; i < 100;i++){
-            list100.add(i+1,new WrapperFizzBuzz(new WrapperNumber(i+1)));
+            list100.add(i+1,new WrapperFizzBuzz(Factory.generateNumber(i+1)));
         }
     }
 
