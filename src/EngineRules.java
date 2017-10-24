@@ -13,7 +13,7 @@ class EngineRules {
         rules.put(Factory.generateNumber(rules.size()),rule);
     }
 
-     WrapperString executeAll(){
+    WrapperString executeAll(){
         WrapperString result = WrapperString.empty();
 
         IteratorListRule iteratorListRule = new IteratorListRule(rules);

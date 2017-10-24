@@ -20,15 +20,15 @@ class WrapperNumber{
     }
 
     static WrapperBoolean isGreaterThan(WrapperNumber less, WrapperNumber higher){
-        return new WrapperBoolean(less.getNumber() > higher.getNumber());
+        return Factory.generateBoolean(less.getNumber() > higher.getNumber());
     }
 
     static WrapperBoolean isModuleOf(WrapperNumber number, WrapperNumber module){
-        return new WrapperBoolean(number.getNumber() % module.getNumber() == 0);
+        return Factory.generateBoolean(number.getNumber() % module.getNumber() == 0);
     }
 
     static WrapperBoolean is(WrapperNumber number, WrapperNumber module){
-        return new WrapperBoolean(number.getNumber() == module.getNumber());
+        return Factory.generateBoolean(number.getNumber() == module.getNumber());
     }
 
     @Override
