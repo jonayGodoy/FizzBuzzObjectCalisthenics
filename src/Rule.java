@@ -1,5 +1,5 @@
 public interface Rule {
 
-    boolean isMeet();
+    boolean match();
     WrapperString generateWrapperString();
 }

@@ -15,7 +15,7 @@ class EngineRules {
 
     public WrapperString executeAll(){
         for (Rule rule : rules) {
-            if(rule.isMeet()){return rule.generateWrapperString();}}
+            if(rule.match()){return rule.generateWrapperString();}}
 
         return WrapperString.empty();
     }

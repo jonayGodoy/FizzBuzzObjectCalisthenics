@@ -7,7 +7,7 @@ public class RuleZero implements Rule{
     }
 
     @Override
-    public boolean isMeet() {
+    public boolean match() {
         return number.getNumber() == 0;
     }
 

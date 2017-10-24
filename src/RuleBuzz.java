@@ -6,7 +6,7 @@ public class RuleBuzz implements Rule{
     }
 
     @Override
-    public boolean isMeet() {
+    public boolean match() {
         return number.getNumber() % 5 == 0;
     }
 

@@ -7,8 +7,8 @@ public class RuleFizzBuzz implements Rule{
     }
 
     @Override
-    public boolean isMeet() {
-        return new RuleFizz(number).isMeet() && new RuleBuzz(number).isMeet();
+    public boolean match() {
+        return new RuleFizz(number).match() && new RuleBuzz(number).match();
     }
 
     @Override

@@ -7,7 +7,7 @@ public class BasicRule implements Rule{
     }
 
     @Override
-    public boolean isMeet() {
+    public boolean match() {
         return number.getNumber() >0 && number.getNumber()< 100;
     }
 

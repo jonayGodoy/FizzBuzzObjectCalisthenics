@@ -7,7 +7,7 @@ public class RuleFizz implements Rule {
     }
 
     @Override
-    public boolean isMeet() {
+    public boolean match() {
         return number.getNumber() % 3 == 0;
     }
 
