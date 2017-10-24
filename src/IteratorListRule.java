@@ -1,29 +1,31 @@
-import java.util.List;
+import java.util.Map;
 
 class IteratorListRule{
 
-    private List<Rule> ruleList;
-    private boolean isNext = true;
-    private int positionCurrentRule;
+    private Map<WrapperNumber, Rule> ruleList;
+    private WrapperBoolean isNext;
+    private WrapperNumber positionCurrentRule;
 
-    IteratorListRule(List<Rule> ruleList) {
-        this.positionCurrentRule = 0;
+    IteratorListRule(Map<WrapperNumber, Rule> ruleList) {
+        this.positionCurrentRule = new WrapperNumber(0);
+
+        isNext = WrapperBoolean.True();
         this.ruleList = ruleList;
     }
 
     Rule nextRule(){
         Rule currentRule = ruleList.get(positionCurrentRule);
-        isNext = !currentRule.match();
-        positionCurrentRule++;
+        isNext = WrapperBoolean.not(currentRule.match());
+        positionCurrentRule.increment();
 
         return currentRule;
     }
 
-    boolean hasNextRule(){
-        return  isNext && isEndList();
+    WrapperBoolean hasNextRule(){
+        return  WrapperBoolean.and(isNext,WrapperBoolean.not(isEndList()));
     }
 
-    private boolean isEndList() {
-        return positionCurrentRule < ruleList.size();
+    private WrapperBoolean isEndList() {
+        return WrapperNumber.isGreaterThan(positionCurrentRule, new WrapperNumber(ruleList.size()-1));
     }
 }

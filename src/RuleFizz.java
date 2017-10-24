@@ -2,13 +2,13 @@ public class RuleFizz implements Rule {
 
     private final WrapperNumber number;
 
-    public RuleFizz(WrapperNumber number) {
+    RuleFizz(WrapperNumber number) {
         this.number = number;
     }
 
     @Override
-    public boolean match() {
-        return number.getNumber() % 3 == 0;
+    public WrapperBoolean match() {
+        return WrapperNumber.isModuleOf(number, new WrapperNumber(3));
     }
 
     @Override

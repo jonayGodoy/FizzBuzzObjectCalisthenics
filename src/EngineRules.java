@@ -1,23 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 class EngineRules {
 
-    private List<Rule> rules ;
+    private Map<WrapperNumber, Rule> rules ;
 
     EngineRules() {
-        rules = new ArrayList<>();
+        rules = new HashMap<>();
     }
 
     void addRule(Rule rule){
-        rules.add(rule);
+        rules.put(new WrapperNumber(rules.size()),rule);
     }
 
      WrapperString executeAll(){
         WrapperString result = WrapperString.empty();
 
         IteratorListRule iteratorListRule = new IteratorListRule(rules);
-        while(iteratorListRule.hasNextRule()){
+        while(iteratorListRule.hasNextRule().equals(WrapperBoolean.True())){
            Rule rule = iteratorListRule.nextRule();
            result = rule.generateWrapperString();
         }

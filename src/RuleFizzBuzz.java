@@ -7,8 +7,11 @@ public class RuleFizzBuzz implements Rule{
     }
 
     @Override
-    public boolean match() {
-        return new RuleFizz(number).match() && new RuleBuzz(number).match();
+    public WrapperBoolean match() {
+        WrapperBoolean firstCondition = new RuleFizz(number).match();
+        WrapperBoolean secondCondition = new RuleBuzz(number).match();
+
+        return WrapperBoolean.and(firstCondition,secondCondition);
     }
 
     @Override

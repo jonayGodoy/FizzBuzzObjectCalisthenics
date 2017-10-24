@@ -7,8 +7,8 @@ public class RuleZero implements Rule{
     }
 
     @Override
-    public boolean match() {
-        return number.getNumber() == 0;
+    public WrapperBoolean match() {
+        return WrapperNumber.is(number,new WrapperNumber(0));
     }
 
     @Override

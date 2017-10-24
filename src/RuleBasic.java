@@ -7,8 +7,11 @@ public class RuleBasic implements Rule{
     }
 
     @Override
-    public boolean match() {
-        return number.getNumber() >0 && number.getNumber()< 100;
+    public WrapperBoolean match() {
+        WrapperBoolean firstCondition = WrapperNumber.isGreaterThan(number, new WrapperNumber(0));
+        WrapperBoolean secondCondition = WrapperNumber.isGreaterThan(number, new WrapperNumber(100));
+
+        return WrapperBoolean.and(firstCondition,secondCondition);
     }
 
     @Override

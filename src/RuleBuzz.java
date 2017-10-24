@@ -1,13 +1,13 @@
 public class RuleBuzz implements Rule{
     private final WrapperNumber number;
 
-    public RuleBuzz(WrapperNumber number) {
+    RuleBuzz(WrapperNumber number) {
         this.number = number;
     }
 
     @Override
-    public boolean match() {
-        return number.getNumber() % 5 == 0;
+    public WrapperBoolean match() {
+        return WrapperNumber.isModuleOf(number, new WrapperNumber(5));
     }
 
     @Override
