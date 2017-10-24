@@ -16,8 +16,6 @@ class WrapperNumber{
     }
 
     void increment(){
-
-        System.out.println(number);
         number = number +1;
     }
 
